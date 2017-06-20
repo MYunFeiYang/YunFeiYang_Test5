@@ -1,16 +1,20 @@
+
+
 module.exports = function main() {
     let sequence = new Sequence([6, 9, 15, -2, 92, 11]);
-    console.log('o) 最小值 = ${sequence.minimum()}
-	o) 最大值 = ${sequence.maximum()}
-	o) 元素数量 = ${sequence.number()}
-	o) 平均值 = ${sequence.average()}');
+    console.log(`o) 最小值 = ${sequence.minimum()}
+o) 最大值 = ${sequence.maximum()}
+o) 元素数量 = ${sequence.number()}
+o) 平均值 = ${sequence.average()}`);
 };
 
 class Sequence {
-  constructor(input){
+  constructor(input) {
     // Write your code here
-	 var min,max,sum = 0;
-    for(var i=0,i<input.length;i++){
+    var min,
+	max,
+	sum = 0;
+    for(var i=0;i<input.length;i++){
 	var value = input[i];
         sum += value;
 	if(!i){
@@ -30,9 +34,10 @@ class Sequence {
     this.max = max;
     this.sum = sum;
     this.input = input;
+    //console.log(min,max,sum);
   }
 
- minimum() {
+  minimum() {
     return this.min;
   }
   
